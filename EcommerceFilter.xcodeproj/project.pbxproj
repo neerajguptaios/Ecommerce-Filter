@@ -15,6 +15,12 @@
 		F85416D1239AE48500C3BA09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85416CF239AE48500C3BA09 /* LaunchScreen.storyboard */; };
 		F85416DC239AE48500C3BA09 /* EcommerceFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85416DB239AE48500C3BA09 /* EcommerceFilterTests.swift */; };
 		F85416E7239AE48500C3BA09 /* EcommerceFilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85416E6239AE48500C3BA09 /* EcommerceFilterUITests.swift */; };
+		F85416F7239AE56000C3BA09 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85416F5239AE56000C3BA09 /* FilterTableViewCell.swift */; };
+		F85416F8239AE56000C3BA09 /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F85416F6239AE56000C3BA09 /* FilterTableViewCell.xib */; };
+		F85416FB239AE5C200C3BA09 /* CategoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85416FA239AE5C200C3BA09 /* CategoryDataSource.swift */; };
+		F85416FD239AE5D100C3BA09 /* CategoryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85416FC239AE5D100C3BA09 /* CategoryDelegate.swift */; };
+		F85416FF239AE5DE00C3BA09 /* FilterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85416FE239AE5DE00C3BA09 /* FilterDataSource.swift */; };
+		F8541701239AE5EC00C3BA09 /* FilterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8541700239AE5EC00C3BA09 /* FilterDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		F85416E2239AE48500C3BA09 /* EcommerceFilterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcommerceFilterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85416E6239AE48500C3BA09 /* EcommerceFilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcommerceFilterUITests.swift; sourceTree = "<group>"; };
 		F85416E8239AE48600C3BA09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F85416F5239AE56000C3BA09 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		F85416F6239AE56000C3BA09 /* FilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterTableViewCell.xib; sourceTree = "<group>"; };
+		F85416FA239AE5C200C3BA09 /* CategoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataSource.swift; sourceTree = "<group>"; };
+		F85416FC239AE5D100C3BA09 /* CategoryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDelegate.swift; sourceTree = "<group>"; };
+		F85416FE239AE5DE00C3BA09 /* FilterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDataSource.swift; sourceTree = "<group>"; };
+		F8541700239AE5EC00C3BA09 /* FilterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +111,9 @@
 		F85416C3239AE48300C3BA09 /* EcommerceFilter */ = {
 			isa = PBXGroup;
 			children = (
+				F85416F9239AE5A300C3BA09 /* DataSource */,
 				F85416C4239AE48300C3BA09 /* AppDelegate.swift */,
+				F85416F4239AE54D00C3BA09 /* Cells */,
 				F85416C6239AE48300C3BA09 /* SceneDelegate.swift */,
 				F85416C8239AE48300C3BA09 /* ViewController.swift */,
 				F85416CA239AE48300C3BA09 /* Main.storyboard */,
@@ -126,6 +140,26 @@
 				F85416E8239AE48600C3BA09 /* Info.plist */,
 			);
 			path = EcommerceFilterUITests;
+			sourceTree = "<group>";
+		};
+		F85416F4239AE54D00C3BA09 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F85416F5239AE56000C3BA09 /* FilterTableViewCell.swift */,
+				F85416F6239AE56000C3BA09 /* FilterTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F85416F9239AE5A300C3BA09 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				F85416FA239AE5C200C3BA09 /* CategoryDataSource.swift */,
+				F85416FC239AE5D100C3BA09 /* CategoryDelegate.swift */,
+				F85416FE239AE5DE00C3BA09 /* FilterDataSource.swift */,
+				F8541700239AE5EC00C3BA09 /* FilterDelegate.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F85416D1239AE48500C3BA09 /* LaunchScreen.storyboard in Resources */,
+				F85416F8239AE56000C3BA09 /* FilterTableViewCell.xib in Resources */,
 				F85416CE239AE48500C3BA09 /* Assets.xcassets in Resources */,
 				F85416CC239AE48300C3BA09 /* Main.storyboard in Resources */,
 			);
@@ -259,8 +294,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8541701239AE5EC00C3BA09 /* FilterDelegate.swift in Sources */,
 				F85416C9239AE48300C3BA09 /* ViewController.swift in Sources */,
+				F85416F7239AE56000C3BA09 /* FilterTableViewCell.swift in Sources */,
+				F85416FF239AE5DE00C3BA09 /* FilterDataSource.swift in Sources */,
 				F85416C5239AE48300C3BA09 /* AppDelegate.swift in Sources */,
+				F85416FB239AE5C200C3BA09 /* CategoryDataSource.swift in Sources */,
+				F85416FD239AE5D100C3BA09 /* CategoryDelegate.swift in Sources */,
 				F85416C7239AE48300C3BA09 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

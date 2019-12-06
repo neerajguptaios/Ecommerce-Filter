@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,54 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EcommerceFilter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U7H-jX-juY">
+                                <rect key="frame" x="0.0" y="44" width="165.5" height="774"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHQ-OM-YLc">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="KeM-8B-U2m"/>
+                                </constraints>
+                                <state key="normal" title="Filter">
+                                    <color key="titleColor" red="0.97647058819999999" green="0.97254901959999995" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eun-zD-8Tn">
+                                <rect key="frame" x="165.5" y="44" width="248.5" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VHQ-OM-YLc" secondAttribute="trailing" id="1cj-wE-ElO"/>
+                            <constraint firstItem="VHQ-OM-YLc" firstAttribute="top" secondItem="Eun-zD-8Tn" secondAttribute="bottom" id="3KO-Fi-5KT"/>
+                            <constraint firstItem="U7H-jX-juY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="GZv-li-0T9"/>
+                            <constraint firstItem="U7H-jX-juY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H6D-eT-NmF"/>
+                            <constraint firstItem="Eun-zD-8Tn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TJw-Fi-TCk"/>
+                            <constraint firstItem="U7H-jX-juY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UTM-iL-U4X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eun-zD-8Tn" secondAttribute="trailing" id="bBJ-CN-Fji"/>
+                            <constraint firstItem="VHQ-OM-YLc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="biH-nw-35u"/>
+                            <constraint firstItem="Eun-zD-8Tn" firstAttribute="leading" secondItem="U7H-jX-juY" secondAttribute="trailing" id="hwP-ps-rGb"/>
+                            <constraint firstItem="VHQ-OM-YLc" firstAttribute="top" secondItem="U7H-jX-juY" secondAttribute="bottom" id="j9e-EQ-GvU"/>
+                            <constraint firstItem="VHQ-OM-YLc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yuW-ya-zzJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="categoryTableView" destination="U7H-jX-juY" id="1ZJ-Mg-P4X"/>
+                        <outlet property="filterTableView" destination="Eun-zD-8Tn" id="p9C-mL-7I1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
